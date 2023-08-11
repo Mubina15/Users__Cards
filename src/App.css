@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #4f6d7a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.list::before {
+    content:"" ;
+    position: absolute;
+    width: 1500px;
+    height: 35px;
+    top: 0;
+    right: 35px;
+    transition: 1.9s;
+    background: linear-gradient(50deg, #00ff59, #02b3ff);
+    transform: rotate(-45deg) translate(0, -150px);
+}
+
+.card {
+    margin: 15px;
+    width: 275px;
+    height: 315px;
+    background: #171614;
+    border-radius: .8em;
+    z-index: 1;
+    color: #858585;
+    overflow: hidden;
+    padding: 1em;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.card__title {
+    width: 200px;
+    padding: 4px;
+    font-size: 21px;
+}
+
+.card__link {
+    color: #858585;
+    text-decoration: none;
+}
+
+.card__text {
+    margin-top: 20px;
+    width: 400px;
+    font-size: 18px;
+}
+
+.card__text2 {
+    margin-top: 50px;
+    width: 400px;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+.card:hover {
+    color: #fff;
+}
+
+.card:hover .card__link {
+    color: #fff;
+}
+
+.error {
+    color: red;
+}
+
+.card:active {
+    color:black;
+    background: #fff;
+}
+
+.card:active .card__link {
+    color:black;
+    background: #fff;
+}
+
+.list:hover::before {
+    animation: effect 2s;
+}
+
+@keyframes effect {
+    100% {
+        transform: rotate(-45deg) translate(0, 900px);
+    }
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    border-radius: 1em;
+    background: linear-gradient(50deg, #2a5a3b, #1e4886);
+    overflow: hidden;
+}
